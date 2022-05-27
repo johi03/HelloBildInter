@@ -1,0 +1,15 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestsSuite" verbose="1">
+    <test name="ExceptionsTests">
+        <classes>
+            <class name="com.selenioCurse.Udemy.ExceptionTests">
+                <methods>
+                    <include name="staleElements"></include>
+                    <exclude name="notVisibleTest"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

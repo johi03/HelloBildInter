@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestsSuite" verbose="1">
+
+    <test name="PositiveTests">
+        <parameter name="url" value="https://demoqa.com/login"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="username" value="correctUsername"/>
+        <parameter name="password" value="correctPWD"/>
+        <parameter name="expectedMessage" value="access validated"/>
+        <groups>
+            <run>
+                <include name="positiveTest"></include>
+
+            </run>
+        </groups>
+        <classes>
+            <class name="com.helloB.inter.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="NegativeUsernameTests">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://demoqa.com/login"/>
+        <parameter name="username" value="incorrectUsername"/>
+        <parameter name="password" value="wrongPWD"/>
+        <parameter name="expectedMessage"
+                   value="Invalid username or password!"/>
+        <classes>
+            <class name="com.helloB.inter.LoginTest">
+                <methods>
+                    <include name="negativeLoginTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+  </suite>

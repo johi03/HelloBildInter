@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestsSuiteTextB" verbose="1">
+
+    <test name="PositiveTBOXTests">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://demoqa.com/text-box"/>
+        <parameter name="fullName" value="fullname"/>
+        <parameter name="email" value="email@dominio.com"/>
+        <parameter name="currentAddress" value="currentAddress Test"/>
+        <parameter name="permanentAddress" value="permanentAddress Test"/>
+        <groups>
+            <run>
+                <include name="smokeTest"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.helloB.inter.TextBox"/>
+        </classes>
+    </test>
+</suite>

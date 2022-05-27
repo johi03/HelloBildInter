@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Debug" verbose="1">
+
+    <test name="PositiveTests">
+        <parameter name="browser" value="chrome"/>
+
+
+        <classes>
+            <class name="com.selenioCurse.Udemy.LoginTest">
+                <methods>
+                    <include name="positiveLoginTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
+
+

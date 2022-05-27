@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Ariya" verbose="1">
+
+    <test name="unosTests">
+        <parameter name="browser" value=" chrome"/>
+        <parameter name="keyProduct" value=" Visual Studio"/>
+        <classes>
+            <!-- <class name="com.unosquere.microsoft.home"/> -->
+            <class name="com.selenioCurse.Udemy.Showcase"/>
+        </classes>
+
+    </test>
+
+</suite>
+
